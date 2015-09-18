@@ -1,0 +1,38 @@
+Pentru creare baza de date(comenzi in terminal):
+-----------------------------------------------------------------
+mysql -u root -p
+
+
+CREATE USER 'arhiva@localhost' IDENTIFIED BY 'arhiva';
+
+CREATE DATABASE Arhiva;
+
+GRANT ALL PRIVILEGES ON Arhiva.* TO 'arhiva'@'localhost';
+
+FLUSH PRIVILEGES;
+
+
+
+//Dupa crearea bazei de date, la lansarea programului se creaza automat
+tabelele dosare, imprumuturi si useri.
+Baza de date are userul "arhiva" si parola "parola"
+
+Tabel useri useri
+---------------------------------------------------------------
+User creati automat:
+user, parola:"", drepturi: cauta
+arhiva , parola:modify, drepturi: modifica
+
+Pentru creare useri noi, introduceti in campul drepuri una din optiunile "cauta" sau "modifica".
+Userii de tip cauta pot doar sa caute dosare, sa le imprumute si sa le restituie.
+Userii de tip modifica pot face ceea ce fac userii de tip cauta, iar in plus pot adauga, modifica, sterge dosare si schimbare parola user.
+
+
+
+Fisiere sursa
+---------------------------------------------------------------
+Folderul Arhiva contine fisiere sursa si poate fi importat in Eclipse. Proiectul foloseste doua libraries, care se pot importa in eclipse prin clik proiect, properties, java build path, libraries, external jars, si se alege mysql-connector-java-5.1.36-bin.jar si miglayout15-swing.jar.
+
+
+
+
